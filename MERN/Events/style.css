@@ -1,0 +1,39 @@
+body {
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    height: 48px;
+    width: 48px;
+    border: none;
+    border-radius: 50%;
+    background-color: teal;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+p {
+    font-size: 24px;
+}
+
+#btn {
+    display: flex;
+    gap: 12px;
+}
+
+/* Reset button styling (ADDED ONLY) */
+body > button {
+    width: auto;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-left: 20px;
+    background-color: crimson;
+    font-size: 16px;
+}
+
