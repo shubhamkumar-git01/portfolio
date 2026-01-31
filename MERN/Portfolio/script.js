@@ -1,39 +1,33 @@
-const form = document.querySelector("form");
-
-const nameInput = document.querySelector("#name");
-const emailInput = document.querySelector("#email");
-const messageInput = document.querySelector("#message");
-
-const errorMsg = document.createElement("p");
-errorMsg.style.color = "red";
-errorMsg.style.fontWeight = "bold";
-
-form.prepend(errorMsg);
-
-form.addEventListener("submit", function (e) {
+const form = document.querySelector('#form');
+const name = document.querySelector('#name');
+const email = document.querySelector('#email');
+const message = document.querySelector('#message');
+const error = document.querySelector('#error');
+const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    if (nameInput.value.trim() === "") {
-        errorMsg.innerText = "Name is required!";
-        return;
+    if (!name.value.trim()) {
+        // alert('Name is required!');
+        error.innerText = 'Name is required!';
     }
-
-    if (nameInput.value.trim().length < 4) {
-        errorMsg.innerText = "Name should be at least 4 characters!";
-        return;
+    else if (name.value.trim().length < 4) {
+        error.innerText = 'Name should be at least of four letters!';
+         }
+    else if (!email.value.trim()) {
+        // alert('Email is required!');
+        error.innerText = 'Email is required!';
     }
-
-    if (emailInput.value.trim() === "") {
-        errorMsg.innerText = "Email is required!";
-        return;
+    else if (!emailRegex.test(email.value.trim())) {
+         alert('Please enter valid email');
     }
-
-    if (messageInput.value.trim() === "") {
-        errorMsg.innerText = "Message cannot be empty!";
-        return;
+    else if (!message.value.trim()) {
+        // alert('You must add message to send it!');
+        error.innerText = 'You must add message to send it!';
     }
-
-    errorMsg.innerText = "";
-    alert("Form submitted successfully!");
-    form.reset();
+    else{
+        alert ('Form submitted successfully!'); 
+        form.reset();
+}
+    
 });
