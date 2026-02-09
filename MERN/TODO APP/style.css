@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    background: #caa7ef;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +16,8 @@ body {
 
 h2 {
     text-align: center;
+    color: #d834f9;
+    margin-bottom: 20px;
 }
 
 .input-box {
@@ -31,6 +33,18 @@ input {
 button {
     padding: 5px 10px;
     cursor: pointer;
+    border: none;
+    border-radius: 3px;
+}
+
+#addTodo {
+    background-color: #a053f2;
+    color: white;
+}
+
+#resetTodo {
+    background-color: #537bf2;
+    color: white;
 }
 
 ul {
@@ -45,11 +59,12 @@ li {
     margin-bottom: 5px;
     background: #eee;
     padding: 5px;
+    border-radius: 3px;
 }
 
 li button {
     background: red;
     color: white;
-    border: none;
+    padding: 2px 6px;
     cursor: pointer;
 }

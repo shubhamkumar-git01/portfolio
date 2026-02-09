@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Placement / Internship Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Smart Placement / Internship Tracker</h1>
+    <p>Track your placement & internship applications efficiently</p>
+  </header>
+
+  <!-- Add Application -->
+  <section class="card">
+    <h2>Add Application</h2>
+    <form id="appForm" class="form-grid">
+      <input type="text" id="company" placeholder="Company Name" required>
+      <input type="text" id="role" placeholder="Role / Position" required>
+
+      <select id="stage">
+        <option value="Applied">Applied</option>
+        <option value="Online Assessment">Online Assessment</option>
+        <option value="Interview">Interview</option>
+        <option value="Offer">Offer</option>
+        <option value="Rejected">Rejected</option>
+      </select>
+
+      <select id="result">
+        <option value="Pending">Pending</option>
+        <option value="Cleared">Cleared</option>
+        <option value="Rejected">Rejected</option>
+      </select>
+
+      <input type="date" id="date" required>
+      <button type="submit" class="primary-btn">Add Application</button>
+    </form>
+  </section>
+
+  <!-- Applications -->
+  <section class="card">
+    <h2>Applications List</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Role</th>
+            <th>Stage</th>
+            <th>Result</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="appList"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Summary -->
+  <section class="summary-grid">
+    <div class="summary-card">
+      <h3>Total</h3>
+      <span id="total">0</span>
+    </div>
+    <div class="summary-card interview">
+      <h3>Interviews</h3>
+      <span id="interviews">0</span>
+    </div>
+    <div class="summary-card offer">
+      <h3>Offers</h3>
+      <span id="offers">0</span>
+    </div>
+    <div class="summary-card reject">
+      <h3>Rejections</h3>
+      <span id="rejections">0</span>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
